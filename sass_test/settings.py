@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'compressor',
-    'testowanie_sass.apps.TestowanieSassConfig',
+    'sample_app.apps.SampleAppConfig',
 ]
 
 MIDDLEWARE = [
@@ -56,7 +56,7 @@ ROOT_URLCONF = 'sass_test.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'sass_test/../sass_test/templates')]
+        'DIRS': [os.path.join(BASE_DIR, '/sample_app/templates')]
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -124,7 +124,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "sass_test", "static", "sass_test"),
+    os.path.join(BASE_DIR, "sample_app", "static"),
 ]
 
 STATICFILES_FINDERS = (
@@ -134,7 +134,7 @@ STATICFILES_FINDERS = (
 )
 
 # COMPRESS_ENABLED = True
-# LIBSASS_SOURCEMAPS = True
+LIBSASS_SOURCEMAPS = True
 
 COMPRESS_PRECOMPILERS = (
     ('text/scss', 'django_libsass.SassCompiler'),
