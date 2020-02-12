@@ -1,4 +1,4 @@
-Django==2.2
+Django==2.2.10
 libsass==0.14.2
 rcssmin==1.0.6 --install-option="--without-c-extensions"
 rjsmin==1.0.12 --install-option="--without-c-extensions"
